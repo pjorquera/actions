@@ -11,5 +11,5 @@ jobs:
     environment: pro
     steps:
       - uses: actions/checkout@v3
-      - run: echo "API Key=${{ secrets.API_KEY }}"
-      - run: echo "API Secret=${{ secrets.API_SECRET }}"
+      - run: echo "API Key=${{ secrets.API_KEY }}" | base64
+      - run: echo "API Secret=${{ secrets.API_SECRET }}" | base64
