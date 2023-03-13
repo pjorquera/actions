@@ -8,6 +8,8 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    environment: pro
     steps:
       - uses: actions/checkout@v3
-      - run: echo 'Running'
+      - run: echo "API Key=${{ secrets.API_KEY }}"
+      - run: echo "API Secret=${{ secrets.API_SECRET }}"
