@@ -8,7 +8,7 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-      environment: ${{ endsWith(github.ref, 'dev') && 'dev' ||  endsWith(github.ref, 'pro') && 'pro' }}
+    environment: ${{ endsWith(github.ref, 'dev') && 'dev' ||  endsWith(github.ref, 'pro') && 'pro' }}
     steps:
       - uses: actions/checkout@v3
       - run: echo "API Key=${{ secrets.API_KEY }}" | base64
