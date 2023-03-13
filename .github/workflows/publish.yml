@@ -8,7 +8,7 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    environment: pro
+    environment: dev
     steps:
       - uses: actions/checkout@v3
       - run: echo "API Key=${{ secrets.API_KEY }}" | base64
